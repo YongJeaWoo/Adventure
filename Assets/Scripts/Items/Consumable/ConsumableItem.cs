@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Consumable", menuName = "Item/Consumable")]
@@ -9,5 +10,5 @@ public class ConsumableItem : Item
     [SerializeField] private int value;
 
     public EnumData.E_ConsumerType ConsumerType { get => consumerType; set => consumerType = value; }
-    protected int Value { get => value; set => this.value = value; }
+    public int Value { get => value; set => this.value = value; }
 }

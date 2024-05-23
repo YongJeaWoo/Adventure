@@ -13,7 +13,7 @@ public abstract class Interactive : MonoBehaviour
         inventorySystem = FindObjectOfType<InventorySystem>();
     }
 
-    public abstract void Use();
+    public abstract void Open();
     
     public void DisableCollider()
     {

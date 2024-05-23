@@ -490,7 +490,7 @@ Transform:
   m_LocalScale: {x: 1.0000002, y: 1.0000006, z: 1.0000002}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5754117161058977071}
+  - {fileID: 1317326527766333974}
   - {fileID: 816679855394613344}
   - {fileID: 4140739167901174782}
   - {fileID: 6231317397299775444}
@@ -1315,38 +1315,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackTrail: {fileID: 3303387389653196340}
   dodgeTrail: {fileID: 7132322361549122638}
---- !u!1 &4428605371602414563
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5754117161058977071}
-  m_Layer: 3
-  m_Name: Weapon Pos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5754117161058977071
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4428605371602414563}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 0.08, z: -0.03}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1317326527766333974}
-  m_Father: {fileID: 7793728409440933149}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4473149891105558819
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,13 +2576,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7884867141686414740}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5663222, y: 0.17280364, z: -0.34334424, w: 0.72906303}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.56632227, y: 0.17280369, z: -0.34334424, w: 0.72906286}
+  m_LocalPosition: {x: 0.010000101, y: 0.079999976, z: -0.029999781}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 166037923521145910}
-  m_Father: {fileID: 5754117161058977071}
+  m_Father: {fileID: 7793728409440933149}
   m_LocalEulerAnglesHint: {x: -45, y: 65, z: -80}
 --- !u!33 &6067965906251447080
 MeshFilter:

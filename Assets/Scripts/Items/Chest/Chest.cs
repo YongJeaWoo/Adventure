@@ -23,7 +23,7 @@ public class Chest : Interactive
         itemInfo.ItemId = UnityEngine.Random.Range((int)idRange.x, ((int)idRange.y) + 1);
     }
 
-    public override void Use()
+    public override void Open()
     {
         animator.SetTrigger("Open");
         inventorySystem.AddItem(ItemInfo);

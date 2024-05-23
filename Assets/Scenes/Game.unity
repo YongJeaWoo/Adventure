@@ -2317,7 +2317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11577,6 +11577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemNameText: {fileID: 1474228160}
   itemExplainText: {fileID: 191557332}
+  imageIcon: {fileID: 465572391}
   itemUseText: {fileID: 867520085}
   itemCancelText: {fileID: 1756355668}
   activeUI: {fileID: 686778994}

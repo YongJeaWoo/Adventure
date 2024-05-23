@@ -7,6 +7,8 @@ public class ItemInfoPanel : MonoBehaviour
     [SerializeField] private Text itemNameText;
     [Header("아이템 설명")]
     [SerializeField] private Text itemExplainText;
+    [Header("아이템 아이콘")]
+    [SerializeField] private Image imageIcon;
     [Header("아이템 사용 텍스트")]
     [SerializeField] private Text itemUseText;
     [Header("아이템 취소 텍스트")]
@@ -39,6 +41,7 @@ public class ItemInfoPanel : MonoBehaviour
             itemCancelText.text = $"";
         }
 
+        imageIcon.sprite = _item.ItemIconImage;
         ActiveUI.gameObject.SetActive(true);
         itemNameText.text = $"{item.ItemName}";
         itemExplainText.text = $"{item.ItemExplain}";

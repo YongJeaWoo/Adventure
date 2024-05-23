@@ -33,7 +33,7 @@ public class ItemDetect : MonoBehaviour
                 {
                     if (currentCol.TryGetComponent<Interactive>(out var interactive))
                     {
-                        interactive.Use();
+                        interactive.Open();
                     }
                 }
                 return;
