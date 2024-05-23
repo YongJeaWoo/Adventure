@@ -28,7 +28,7 @@ public class BaseAttack : MonoBehaviour
         {
             if (hitObj.TryGetComponent<BaseHealth>(out var enemyHealth))
             {
-                var hitPos = hitObj.ClosestPoint(hitObj.transform.position);
+                var hitPos = hitObj.ClosestPoint(attackHitPoint.position);
                 enemyHealth.TakeDamage(attackHitEffectPrefab, hitPos, damage, true);
                 hitObj.GetComponent<IHit>().Hit();
             }
