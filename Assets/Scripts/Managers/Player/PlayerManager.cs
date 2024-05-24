@@ -23,9 +23,11 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] private GameObject playerPrefab;
 
+    [SerializeField] private Transform playerSpawnPos;
+
     public void SetPlayer()
     {
-        player = Instantiate(playerPrefab);
+        player = Instantiate(playerPrefab, playerSpawnPos.position, Quaternion.identity);
     }
 
     public void DeletePlayer()
