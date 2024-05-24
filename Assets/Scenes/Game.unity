@@ -4993,7 +4993,7 @@ GameObject:
   - component: {fileID: 537135387}
   - component: {fileID: 537135386}
   m_Layer: 0
-  m_Name: Wooden_Chest (1)
+  m_Name: Wooden_Chest
   m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -15,7 +15,7 @@ public class BaseHealth : MonoBehaviour
     [SerializeField] private Image hpProgressImage;
     public Image HpProgressImage { get => hpProgressImage; set => hpProgressImage = value; }
 
-    protected int currentHp;
+    [SerializeField] protected int currentHp;
     public int CurrentHp
     {
         get

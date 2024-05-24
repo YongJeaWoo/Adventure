@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
@@ -44,19 +45,19 @@ public class InventoryUI : MonoBehaviour
         ItemInfoPanel.HideItemInfo();
     }
 
-    public void UseItem(Item _item)
+    public void UseItem(Item _useItem)
     {
-        if (_item.Type == EnumData.E_ItemType.Consumable)
+        if (_useItem.Type == EnumData.E_ItemType.Consumable)
         {
-            if (_item.ItemCount > 1)
+            if (_useItem.ItemCount > 1)
             {
-                _item.ItemCount--;
+                _useItem.ItemCount--;
                 UpdateInventoryUI();
                 return;
             }
         }
 
-        inventorySystem.RemoveItem(_item);
+        inventorySystem.RemoveItem(_useItem);
     }
 
     public void RemoveItem(Item _item)

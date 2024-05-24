@@ -55,6 +55,7 @@ public class ItemInfoPanel : MonoBehaviour
     public void OnUseItemButtonClick()
     {
         inventoryUI.UseItem(item);
+        PlayerManager.instance.RefreshHpUI((ConsumableItem)item);
     }
 
     public void OnExitButtonClick()
