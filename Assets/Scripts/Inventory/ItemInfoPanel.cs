@@ -20,6 +20,7 @@ public class ItemInfoPanel : MonoBehaviour
     private InventoryUI inventoryUI;
 
     private Item item;
+    private ConsumableItem consumableItem;
 
     [Header ("아이템 정보 패널")]
     [SerializeField] private Transform activeUI;
@@ -29,6 +30,7 @@ public class ItemInfoPanel : MonoBehaviour
     {
         inventoryUI = _inventoryUI;
         item = _item;
+        consumableItem = (ConsumableItem)item;
 
         if (item.Type == EnumData.E_ItemType.Consumable)
         {
@@ -45,6 +47,12 @@ public class ItemInfoPanel : MonoBehaviour
         ActiveUI.gameObject.SetActive(true);
         itemNameText.text = $"{item.ItemName}";
         itemExplainText.text = $"{item.ItemExplain}";
+
+        if (consumableItem.OnceOpen)
+        {
+            itemNameText.text = $"{consumableItem.OnceOpenName}";
+            itemExplainText.text = $"{consumableItem.OnceOpenExplain}";
+        }
     }
 
     public void HideItemInfo()
@@ -55,7 +63,13 @@ public class ItemInfoPanel : MonoBehaviour
     public void OnUseItemButtonClick()
     {
         inventoryUI.UseItem(item);
-        PlayerManager.instance.RefreshHpUI((ConsumableItem)item);
+        PlayerManager.instance.RefreshHpUI(consumableItem);
+
+        if (consumableItem.ConsumerType == EnumData.E_ConsumerType.Curse)
+        {
+            consumableItem.OnceOpen = true;
+            
+        }
     }
 
     public void OnExitButtonClick()

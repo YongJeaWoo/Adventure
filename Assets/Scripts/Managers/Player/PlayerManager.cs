@@ -61,7 +61,7 @@ public class PlayerManager : MonoBehaviour
 
         float elapsedTime = 0f;
 
-        while (elapsedTime <= duration)
+        while (elapsedTime < duration)
         {
             yield return new WaitForSeconds(interval);
             elapsedTime += interval;

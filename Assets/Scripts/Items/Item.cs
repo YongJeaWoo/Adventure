@@ -14,8 +14,6 @@ public abstract class Item : ScriptableObject
     [SerializeField] private Sprite itemIconImage;
     [Header("아이템 갯수")]
     [SerializeField] private int itemCount;
-    [Header("아이템 사용 수치")]
-    [SerializeField] private int value;
 
     public EnumData.E_ItemType Type { get => type; set => type = value; }
     public int ItemId { get => itemId; set => itemId = value; }
@@ -23,7 +21,6 @@ public abstract class Item : ScriptableObject
     public string ItemExplain { get => itemExplain; set => itemExplain = value; }
     public Sprite ItemIconImage { get => itemIconImage; set => itemIconImage = value; }
     public int ItemCount { get => itemCount; set => itemCount = value; }
-    public int Value { get => value; set => this.value = value; }
 
     public Item Clone()
     {

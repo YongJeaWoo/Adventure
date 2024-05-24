@@ -17,6 +17,9 @@ public class Chest : Interactive
     [Header ("아이템 랜덤 범위")]
     [SerializeField] private Vector2 idRange;
 
+    [Header("상자 열림 이팩트")]
+    [SerializeField] private GameObject openEffectPrefab;
+
     protected override void Awake()
     {
         base.Awake();
@@ -27,5 +30,10 @@ public class Chest : Interactive
     {
         animator.SetTrigger("Open");
         inventorySystem.AddItem(ItemInfo);
+    }
+
+    public void OpenEffect()
+    {
+        Instantiate(openEffectPrefab, transform.position, Quaternion.identity);
     }
 }

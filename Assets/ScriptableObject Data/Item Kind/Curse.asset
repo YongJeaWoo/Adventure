@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   itemId: 1001
-  itemName: "\uB204\uAD70\uAC00\uC758 \uC800\uC8FC"
+  itemName: "\uC0C9\uC774 \uD0C1\uD55C \uD3EC\uC158"
   itemExplain: "\uC368 \uBCF4\uC9C0 \uC54A\uB294 \uD55C \uD6A8\uACFC\uB97C \uC54C
     \uC218 \uC5C6\uC2B5\uB2C8\uB2E4"
   itemIconImage: {fileID: 21300000, guid: b3e2ac932f47fd34d900dcd7b3a759f7, type: 3}
   itemCount: 1
   consumerType: 1
-  value: 10
+  value: 2
+  onceOpenName: "\uB9DB\uC774 \uC5C6\uB294 \uD3EC\uC158"
+  onceOpenExplain: "\uC720\uD1B5\uAE30\uD55C\uC774 \uC9C0\uB0AC\uB294\uC9C0 \uBAB8\uC774
+    \uC544\uD30C\uC624\uB294 \uC57D\uC785\uB2C8\uB2E4"

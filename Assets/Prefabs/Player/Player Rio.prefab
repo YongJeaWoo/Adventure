@@ -1198,6 +1198,7 @@ MonoBehaviour:
   hitEffectPos: {fileID: 5501496060079282753}
   hp: 100
   hpProgressImage: {fileID: 0}
+  currentHp: 0
   healthSlider: {fileID: 0}
 --- !u!114 &783883610503559054
 MonoBehaviour:
@@ -1297,7 +1298,7 @@ MonoBehaviour:
   attackClip: {fileID: 8300000, guid: fd901d9d1098b464ba4e39a2915d38cb, type: 3}
   skillName: QSkill
   qSkillSOJ: {fileID: 11400000, guid: b99f0d50a7c7f4246af00b208abd20e7, type: 2}
-  groundEffectPrefab: {fileID: 1040608886635896, guid: e2d8ca5201e60bc4baf99347e4a22ba0,
+  groundEffectPrefab: {fileID: 3432958286849152088, guid: 0797dafdf4abd274ab4089de1b3b6c6e,
     type: 3}
   effectTransform: {fileID: 7360856154097362291}
   groundClip: {fileID: 8300000, guid: f45a5b9dce916b94199cc304d958387a, type: 3}
