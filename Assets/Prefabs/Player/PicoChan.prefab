@@ -3451,7 +3451,7 @@ GameObject:
   - component: {fileID: 2583360554060326547}
   - component: {fileID: 1582167405291534802}
   - component: {fileID: 4299318671276357461}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PicoChan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6737,7 +6737,7 @@ Transform:
   m_GameObject: {fileID: 5311483335463892286}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7614,7 +7614,7 @@ Transform:
   m_GameObject: {fileID: 6265869100311275018}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: -0.1, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9635,9 +9635,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7334095031888618798}
-  - component: {fileID: 5253354461336640612}
+  - component: {fileID: 2433432531445460873}
   m_Layer: 3
-  m_Name: Item Detected
+  m_Name: Item Detect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9652,13 +9652,13 @@ Transform:
   m_GameObject: {fileID: 8018771023928327240}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8089018814587400561}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5253354461336640612
+--- !u!114 &2433432531445460873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -13,14 +13,20 @@ public class BossDetect : MonoBehaviour
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, detectBossRadius);
 
+        bool bossDetected = false;
+
         foreach (var collider in colliders)
         {
             if (collider.CompareTag("Area"))
             {
                 DetectBossArea(collider);
+                bossDetected = true;
                 break;
             }
+        }
 
+        if (!bossDetected)
+        {
             BossBattleManager.instance.SetBoss(null);
         }
     }
@@ -42,5 +48,11 @@ public class BossDetect : MonoBehaviour
         {
             BossBattleManager.instance.SetBoss(null);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, detectBossRadius);
     }
 }

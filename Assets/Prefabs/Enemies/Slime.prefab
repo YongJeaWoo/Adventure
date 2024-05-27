@@ -153,7 +153,7 @@ Animator:
   m_GameObject: {fileID: 1921352821299431240}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 913b30b2688cc414b82732a88d2a4076, type: 2}
+  m_Controller: {fileID: 22100000, guid: 99367dab92c97bb44ac65d77fab4dba0, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -219,10 +219,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50cf6b0971448c045a110cc67e5b4269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageTextPrefab: {fileID: 8879156435315789978, guid: 07f3d19c575a8a5439b42beeb32015c5, type: 3}
+  damageTextPrefab: {fileID: 8879156435315789978, guid: 07f3d19c575a8a5439b42beeb32015c5,
+    type: 3}
   hitEffectPos: {fileID: 1929316528545205868}
   hp: 100
   hpProgressImage: {fileID: 5425369065247155034}
+  currentHp: 0
   knockBackDis: 1
 --- !u!114 &8844522231738353105
 MonoBehaviour:
@@ -247,7 +249,7 @@ MonoBehaviour:
   bossDataSOJ: {fileID: 0}
   detectDistance: 0
   targetName: Player
-  wanderPoints: []
+  wanderPoint: {fileID: 0}
 --- !u!114 &5794763822697356173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDistance: 2
   detectDistance: 7
-  checkTimeRange: {x: 0, y: 0}
+  checkTimeRange: {x: 2, y: 5}
 --- !u!114 &2552747529480439339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +312,8 @@ MonoBehaviour:
   detectDistance: 7
   smoothValue: 3
   attackHitPoint: {fileID: 1586547632153213288}
-  attackHitEffectPrefab: {fileID: 8680598818964007281, guid: e7e4f3e284167c5409006ce69b7ff9a2, type: 3}
+  attackHitEffectPrefab: {fileID: 8680598818964007281, guid: e7e4f3e284167c5409006ce69b7ff9a2,
+    type: 3}
   PlayerName: Player
   damage: 10
 --- !u!114 &6429923681487216354
@@ -356,7 +359,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathDelayTime: 2
-  destroyParticlePrefab: {fileID: 8176850701479282271, guid: d7f41091c57f52a4eb5ae7f134a0b935, type: 3}
+  destroyParticlePrefab: {fileID: 8176850701479282271, guid: d7f41091c57f52a4eb5ae7f134a0b935,
+    type: 3}
 --- !u!1 &2706451083395139680
 GameObject:
   m_ObjectHideFlags: 0

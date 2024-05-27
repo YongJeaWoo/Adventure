@@ -49,14 +49,21 @@ public class LittleEnemyArea : EnemyArea
 
     protected override void Spawn()
     {
-        int randomIndex = Random.Range(0, enemiesList.Count);
-
-        GameObject enemyPrefab = enemiesList[randomIndex];
+        List<GameObject> weightedEnemiesList = new List<GameObject>(enemiesList);
 
         foreach (Transform spawnPos in transforms)
         {
+            int randomIndex = Random.Range(0, weightedEnemiesList.Count);
+            GameObject enemyPrefab = weightedEnemiesList[randomIndex];
+            weightedEnemiesList.Remove(enemyPrefab);
+
             var go = Instantiate(enemyPrefab, spawnPos.position, Quaternion.identity);
             go.transform.SetParent(spawnPos);
+
+            if (weightedEnemiesList.Count == 0)
+            {
+                weightedEnemiesList = new List<GameObject>(enemiesList);
+            }
         }
     }
 }

@@ -15,14 +15,14 @@ public enum E_State
 public class EnemyFSM : FSMController<E_State, EnemyState, EnemyFSM>
 {
     [Header ("배회 포인트")]
-    [SerializeField] private Transform[] wanderPoints;
-    private HashSet<Transform> occupiedPoints = new HashSet<Transform>();
+    [SerializeField] private Transform wanderPoint;
 
 
     protected override void Start()
     {
         base.Start();
         TransitionToState(E_State.Idle);
+        wanderPoint = transform.parent;
     }
 
     public void Hit()
@@ -31,6 +31,5 @@ public class EnemyFSM : FSMController<E_State, EnemyState, EnemyFSM>
         TransitionToState(E_State.Hit);
     }
 
-    public HashSet<Transform> GetOccupiedPoints() => occupiedPoints;
-    public Transform[] GetWanderPoints() => wanderPoints;
+    public Transform GetWanderPoint() => wanderPoint;
 }

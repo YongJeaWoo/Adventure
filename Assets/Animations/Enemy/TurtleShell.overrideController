@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TurtleShell
+  m_Controller: {fileID: 9100000, guid: 913b30b2688cc414b82732a88d2a4076, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: a21be560947f04e449681dd25d206196, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 322d693332d0ccd41bda1fad1cb03079, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c5311d3b30ab21143820d61c36c14c8c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4edfa79f8087c2b4d8e2503858d4180f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 784a261a36520d94495c88c8c424f8e0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5657fc85ca558ea44aa26b258bdaa10f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 49d328870a25ab149a3b561a79a6e561, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2869d828381c182429e3d21a6192f17a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 233e9904dcc09744fb3a14f25f2ce708, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c0d0331e1c2eb8248bd86440d73938e4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3a4a24a74ed63ce408c00551a3e4d358, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: fb14f96907f6afa488368f9edafd7f15, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1cc9479a121496340998f3d5e156b75a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 35497fb4e6c94bf4aa43376265a99cab, type: 2}
