@@ -28,6 +28,7 @@ public class Chest : Interactive
 
     public override void Open()
     {
+        Interacted = true;
         animator.SetTrigger("Open");
         inventorySystem.AddItem(ItemInfo);
     }

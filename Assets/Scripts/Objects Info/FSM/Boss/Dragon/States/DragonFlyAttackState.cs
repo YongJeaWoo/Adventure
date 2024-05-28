@@ -11,10 +11,14 @@ public class DragonFlyAttackState : BossAttackAble
         col = GetComponent<Collider>();
     }
 
+    private void Start()
+    {
+        SetDamage(fsm.BossDataSOJ.FlyDamage);
+    }
+
     public override void EnterState(E_DragonState state)
     {
         animator.SetInteger(AnimationName, (int)state);
-
         StartCoroutine(CurveAttack(transform.position, fsm.GetPlayer().transform.position));
     }
 
@@ -25,7 +29,7 @@ public class DragonFlyAttackState : BossAttackAble
 
     public override void ExitState()
     {
-        StopCoroutine(nameof(CurveAttack));
+        
     }
 
 

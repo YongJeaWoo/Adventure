@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ItemDetect : MonoBehaviour
 {
-    private Collider currentCol;
+    private Interactive currentInteractive;
     private Image infoImage;
 
     private float detectionRadius = 2f;
@@ -31,8 +31,10 @@ public class ItemDetect : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    if (currentCol.TryGetComponent<Interactive>(out var interactive))
+                    if (currentInteractive.TryGetComponent<Interactive>(out var interactive))
                     {
+                        if (interactive.Interacted) return;
+
                         interactive.Open();
                     }
                 }
@@ -45,7 +47,15 @@ public class ItemDetect : MonoBehaviour
 
     private void CheckCollider(Collider col, bool isOn)
     {
-        currentCol = col;
+        if (col != null)
+        {
+            currentInteractive = col.GetComponent<Interactive>();
+        }
+        else
+        {
+            currentInteractive = null;
+        }
+
         infoImage.gameObject.SetActive(isOn);
     }
 

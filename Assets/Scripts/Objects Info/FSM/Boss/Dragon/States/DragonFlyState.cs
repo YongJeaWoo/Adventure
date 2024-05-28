@@ -1,15 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
-public class DragonFlyState : BossAttackAble
+public class DragonFlyState : BossState
 {
     [Header ("공격 대기 시간")]
     [SerializeField] protected float attackTime;
-
-    private void Start()
-    {
-        SetDamage(fsm.BossDataSOJ.FlyDamage);
-    }
 
     public override void EnterState(E_DragonState state)
     {
