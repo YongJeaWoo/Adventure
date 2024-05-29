@@ -26,6 +26,13 @@ public class ItemInfoPanel : MonoBehaviour
     [SerializeField] private Transform activeUI;
     public Transform ActiveUI { get => activeUI; set => activeUI = value; }
 
+    private ConsumableCurseItemInfo curseItemInfo;
+
+    private void Awake()
+    {
+        curseItemInfo = FindObjectOfType<ConsumableCurseItemInfo>();
+    }
+
     public void ShowItemInfo(InventoryUI _inventoryUI, Item _item)
     {
         inventoryUI = _inventoryUI;
@@ -45,13 +52,17 @@ public class ItemInfoPanel : MonoBehaviour
 
         imageIcon.sprite = _item.ItemIconImage;
         ActiveUI.gameObject.SetActive(true);
-        itemNameText.text = $"{item.ItemName}";
-        itemExplainText.text = $"{item.ItemExplain}";
 
-        if (consumableItem.OnceOpen)
+        if (consumableItem != null)
         {
-            itemNameText.text = $"{consumableItem.OnceOpenName}";
-            itemExplainText.text = $"{consumableItem.OnceOpenExplain}";
+            var (name, explain) = curseItemInfo.GetUseItemMessage(consumableItem);
+            itemNameText.text = name;
+            itemExplainText.text = explain;
+        }
+        else
+        {
+            itemNameText.text = item.ItemName;
+            itemExplainText.text = item.ItemExplain;
         }
     }
 
@@ -65,9 +76,9 @@ public class ItemInfoPanel : MonoBehaviour
         inventoryUI.UseItem(item);
         PlayerManager.instance.RefreshHpUI(consumableItem);
 
-        if (consumableItem.ConsumerType == EnumData.E_ConsumerType.Curse)
+        if (consumableItem != null && consumableItem.ConsumerType == EnumData.E_ConsumerType.Curse)
         {
-            consumableItem.OnceOpen = true;
+            curseItemInfo.MarkItemAsUsed(consumableItem.ItemId);
         }
     }
 

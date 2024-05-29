@@ -32,22 +32,6 @@ public class UIManager : MonoBehaviour
 
     private List<GameObject> uiSlots = new List<GameObject>();
 
-    private void Start()
-    {
-        //InitUISlot();
-    }
-
-    private void InitUISlot()
-    {
-        for (int i = 0; i < 5; i++)
-        {
-            var obj = Instantiate(ShowUIPrefab, uiParentPosition.position, Quaternion.identity);
-            obj.SetActive(false);
-            obj.transform.SetParent(uiParentPosition);
-            uiSlots.Add(obj);
-        }
-    }
-
     public void AddItemShowText()
     {
         var go = Instantiate(ShowUIPrefab, uiParentPosition.position, Quaternion.identity);

@@ -8,6 +8,7 @@ public class InventorySystem : MonoBehaviour
     [SerializeField] private ItemList[] itemList;
 
     private int inventorySize;
+    private ConsumableCurseItemInfo curseItemInfo;
 
     [SerializeField] private InventoryUI inventoryUI;
     public InventoryUI InventoryUI { get => inventoryUI; set => inventoryUI = value; }
@@ -15,6 +16,11 @@ public class InventorySystem : MonoBehaviour
     // »πµÊ«— æ∆¿Ã≈€ ∏ÆΩ∫∆Æ
     private List<Item> getItemList = new List<Item>();
     public List<Item> GetItemList { get => getItemList; set => getItemList = value; }
+
+    private void Awake()
+    {
+        curseItemInfo = FindObjectOfType<ConsumableCurseItemInfo>();
+    }
 
     private void Start()
     {
@@ -27,14 +33,19 @@ public class InventorySystem : MonoBehaviour
         {
             ConsumableItem cItem = (ConsumableItem)GetItemList.FirstOrDefault(item => item.ItemId == _itemInfo.ItemId);
 
+            var info = UIManager.instance.ShowUIPrefab.GetComponent<ItemShowInfo>();
+
             if (cItem != null)
             {
                 cItem.ItemCount++;
 
-                var info = UIManager.instance.ShowUIPrefab.GetComponent<ItemShowInfo>();
-                if (cItem.OnceOpen)
+                if (curseItemInfo.IsItemOpen(cItem.ItemId))
                 {
-                    info.ItemNameText.text = cItem.OnceOpenName;
+                    info.ItemNameText.text = curseItemInfo.AfterUseItemName;
+                }
+                else
+                {
+                    info.ItemNameText.text = cItem.ItemName;
                 }
             }
             else
@@ -49,7 +60,6 @@ public class InventorySystem : MonoBehaviour
                 if (item != null)
                 {
                     GetItemList.Add(item);
-                    var info = UIManager.instance.ShowUIPrefab.GetComponent<ItemShowInfo>();
                     info.ItemNameText.text = item.ItemName;
                     info.ItemIconImage.sprite = item.ItemIconImage;
                 }
