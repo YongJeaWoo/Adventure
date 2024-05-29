@@ -32,21 +32,12 @@ public class InventorySystem : MonoBehaviour
         if (_itemInfo.ItemType == EnumData.E_ItemType.Consumable)
         {
             ConsumableItem cItem = (ConsumableItem)GetItemList.FirstOrDefault(item => item.ItemId == _itemInfo.ItemId);
-
             var info = UIManager.instance.ShowUIPrefab.GetComponent<ItemShowInfo>();
 
             if (cItem != null)
             {
                 cItem.ItemCount++;
-
-                if (curseItemInfo.IsItemOpen(cItem.ItemId))
-                {
-                    info.ItemNameText.text = curseItemInfo.AfterUseItemName;
-                }
-                else
-                {
-                    info.ItemNameText.text = cItem.ItemName;
-                }
+                SetItemInfo(info, cItem);
             }
             else
             {
@@ -60,8 +51,7 @@ public class InventorySystem : MonoBehaviour
                 if (item != null)
                 {
                     GetItemList.Add(item);
-                    info.ItemNameText.text = item.ItemName;
-                    info.ItemIconImage.sprite = item.ItemIconImage;
+                    SetItemInfo(info, item);
                 }
             }
         }
@@ -70,6 +60,22 @@ public class InventorySystem : MonoBehaviour
         UIManager.instance.AddItemShowText();
 
         return true;
+    }
+
+    private void SetItemInfo(ItemShowInfo info, Item item)
+    {
+        ConsumableItem consumableItem = item as ConsumableItem;
+
+        if (consumableItem != null && consumableItem.ConsumerType == EnumData.E_ConsumerType.Curse && curseItemInfo.IsItemOpen(item.ItemId))
+        {
+            info.ItemNameText.text = curseItemInfo.AfterUseItemName;
+        }
+        else
+        {
+            info.ItemNameText.text = item.ItemName;
+        }
+
+        info.ItemIconImage.sprite = item.ItemIconImage; 
     }
 
     public void RemoveItem(Item _item)

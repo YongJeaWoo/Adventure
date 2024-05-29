@@ -53,7 +53,8 @@ public class ItemInfoPanel : MonoBehaviour
         imageIcon.sprite = _item.ItemIconImage;
         ActiveUI.gameObject.SetActive(true);
 
-        if (consumableItem != null)
+        if (consumableItem != null && 
+            consumableItem.ConsumerType == EnumData.E_ConsumerType.Curse)
         {
             var (name, explain) = curseItemInfo.GetUseItemMessage(consumableItem);
             itemNameText.text = name;
