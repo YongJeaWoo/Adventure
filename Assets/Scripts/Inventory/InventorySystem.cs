@@ -30,6 +30,12 @@ public class InventorySystem : MonoBehaviour
             if (cItem != null)
             {
                 cItem.ItemCount++;
+
+                var info = UIManager.instance.ShowUIPrefab.GetComponent<ItemShowInfo>();
+                if (cItem.OnceOpen)
+                {
+                    info.ItemNameText.text = cItem.OnceOpenName;
+                }
             }
             else
             {
@@ -43,11 +49,15 @@ public class InventorySystem : MonoBehaviour
                 if (item != null)
                 {
                     GetItemList.Add(item);
+                    var info = UIManager.instance.ShowUIPrefab.GetComponent<ItemShowInfo>();
+                    info.ItemNameText.text = item.ItemName;
+                    info.ItemIconImage.sprite = item.ItemIconImage;
                 }
             }
         }
 
         InventoryUI.UpdateInventoryUI();
+        UIManager.instance.AddItemShowText();
 
         return true;
     }

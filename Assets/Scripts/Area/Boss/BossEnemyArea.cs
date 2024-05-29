@@ -24,11 +24,6 @@ public class BossEnemyArea : EnemyArea
         Spawn();
     }
 
-    private void Update()
-    {
-        Respawn();
-    }
-
     protected override void Spawn()
     {
         BossObj = Instantiate(bossPrefab, spawnPos.transform.position, Quaternion.identity);
@@ -38,6 +33,7 @@ public class BossEnemyArea : EnemyArea
         fsm.IsAlive = true;
     }
 
+    // 리스폰은 Update에서 진행 현재는 게임 방향상 사용하지 않음
     protected override void Respawn()
     {
         if (!fsm.IsAlive)

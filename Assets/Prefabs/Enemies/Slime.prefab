@@ -279,7 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDistance: 2
   detectDistance: 6
-  radius: 0
+  radius: 0.5
   moveSpeed: 1.8
 --- !u!114 &6234569552086249431
 MonoBehaviour:

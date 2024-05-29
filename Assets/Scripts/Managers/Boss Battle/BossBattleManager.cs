@@ -33,13 +33,11 @@ public class BossBattleManager : MonoBehaviour
         if (_bossArea == null)
         {
             UpdateBossUI(null, false);
-            Debug.Log($"일반 상태");
             AudioManager.instance.PlayRandomBackgroundMusic();
         }
         else
         {
             UpdateBossUI(_bossArea, true);
-            Debug.Log($"전투 상태");
             AudioManager.instance.PlayBattleMusic(_bossArea.BattleClip);
         }
     }

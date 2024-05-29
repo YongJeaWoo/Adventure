@@ -68,7 +68,6 @@ public class ItemInfoPanel : MonoBehaviour
         if (consumableItem.ConsumerType == EnumData.E_ConsumerType.Curse)
         {
             consumableItem.OnceOpen = true;
-            
         }
     }
 

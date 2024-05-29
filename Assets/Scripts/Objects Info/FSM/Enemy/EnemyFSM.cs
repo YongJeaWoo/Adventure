@@ -31,5 +31,6 @@ public class EnemyFSM : FSMController<E_State, EnemyState, EnemyFSM>
         TransitionToState(E_State.Hit);
     }
 
+    public float GobackWanderPoint() => Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(wanderPoint.position.x, 0, wanderPoint.position.z));
     public Transform GetWanderPoint() => wanderPoint;
 }

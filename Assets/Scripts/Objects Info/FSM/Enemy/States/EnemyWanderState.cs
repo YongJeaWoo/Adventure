@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyWanderState : EnemyAttackAble
 {
     [Header ("배회 범위")]
-    [SerializeField] protected float radius;
+    [SerializeField] protected float wanderDistance;
     [Header("배회 시 이동 속도")]
     [SerializeField] protected float moveSpeed;
 
@@ -27,11 +27,17 @@ public class EnemyWanderState : EnemyAttackAble
             return;
         }
 
+        if (fsm.GobackWanderPoint() <= wanderDistance)
+        {
+            fsm.TransitionToState(E_State.Idle);
+            return;
+        }
+
         agent.SetDestination(fsm.GetWanderPoint().position);
     }
 
     public override void ExitState()
     {
-        
+
     }
 }
