@@ -39,6 +39,7 @@ public class DragonDeathState : BossState
         {
             Instantiate(destroyParticlePrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            GameManager.instance.GameOver();
             fsm.IsAlive = false;
             return;
         }

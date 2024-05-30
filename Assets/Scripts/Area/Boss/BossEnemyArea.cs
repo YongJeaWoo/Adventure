@@ -31,6 +31,7 @@ public class BossEnemyArea : EnemyArea
         fsm = BossObj.GetComponent<BossFSM>();
         CurrentBoss = BossObj;
         fsm.IsAlive = true;
+        GameManager.instance.SetBossFSM(fsm);
     }
 
     // 리스폰은 Update에서 진행 현재는 게임 방향상 사용하지 않음

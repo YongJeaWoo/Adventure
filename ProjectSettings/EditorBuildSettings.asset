@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Others/Medieval Melee Weapon Pack/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Title.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: 366bde4ab5331774c85754c1e5badff1
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 4cf259fc4705c134491198d098949792
   m_configObjects: {}

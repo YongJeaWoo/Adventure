@@ -72,6 +72,11 @@ public class DragonFlyAttackState : BossAttackAble
         fsm.TransitionToState(E_DragonState.Land);
     }
 
+    public void AnimationFlyAttackEvent()
+    {
+        Attack(fsm.TargetName);
+    }
+
     public void ToggleCollider(bool _isOn)
     {
         _isOn = !_isOn;

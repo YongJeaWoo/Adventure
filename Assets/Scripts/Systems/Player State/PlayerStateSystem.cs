@@ -54,29 +54,12 @@ public class PlayerStateSystem : MouseLock
                     HideMouseCursor();
                     PlayerSet();
                     UpdateEnemyFSMPlayer();
+                    SetHp();
                 }
                 break;
             case E_PlayerState.Death:
                 {
-
-                }
-                break;
-        }
-
-        switch (state)
-        {
-            case E_PlayerState.Alive:
-                {
-                    var hpProgress = player.GetComponent<CharacterHealth>();
-                    hpProgress.HealthSlider = playerProgressBar;
-                    playerProgressBar.value = 1f;
-                    deathCanvas.SetActive(false);
-                }
-                break;
-            case E_PlayerState.Death:
-                {
-                    deathCanvas.SetActive(true);
-                    StartCoroutine(WaitForInput());
+                    PlayerDeath();
                 }
                 break;
         }
@@ -142,5 +125,19 @@ public class PlayerStateSystem : MouseLock
         {
             bossesFSM.SetPlayer(player);
         }
+    }
+
+    private void SetHp()
+    {
+        var hpProgress = player.GetComponent<CharacterHealth>();
+        hpProgress.HealthSlider = playerProgressBar;
+        playerProgressBar.value = 1f;
+        deathCanvas.SetActive(false);
+    }
+
+    private void PlayerDeath()
+    {
+        deathCanvas.SetActive(true);
+        StartCoroutine(WaitForInput());
     }
 }
