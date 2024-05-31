@@ -151,7 +151,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437420421031129103}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 599b2dc9e6c44a8ebc02ddea1f18d215, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 1a8a36d28e769f74db1ddbac4700e110, type: 3}
   m_Controller: {fileID: 22100000, guid: a67ef4e6ee008a54f8e37ab65c81c2d0, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -263,7 +263,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDistance: 2
   detectDistance: 7
-  checkTimeRange: {x: 3, y: 7}
 --- !u!114 &7965929213580963102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,7 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDistance: 2
   detectDistance: 6
-  radius: 0.5
+  wanderDistance: 0
   moveSpeed: 1.8
 --- !u!114 &1171641108582626884
 MonoBehaviour:
@@ -329,7 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDistance: 0
   detectDistance: 0
-  radius: 0
+  wanderDistance: 0
   moveSpeed: 0
 --- !u!114 &9138191042809257992
 MonoBehaviour:

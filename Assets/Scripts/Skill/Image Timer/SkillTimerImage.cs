@@ -8,6 +8,10 @@ public class SkillTimerImage : MonoBehaviour
     [SerializeField] private Image skillIcon;
     [SerializeField] private Image filledImage;
     [SerializeField] private float timerDuration;
+    [SerializeField] private Text skillCoolText;
+
+    [Header("스킬 사용 가능 이팩트")]
+    [SerializeField] private ParticleSystem useOnEffect;
 
     private float timer;
     private bool isTimerRunning = false;
@@ -36,8 +40,10 @@ public class SkillTimerImage : MonoBehaviour
     {
         if (isTimerRunning)
         {
+            skillCoolText.gameObject.SetActive(true);
             timer -= Time.deltaTime;
             filledImage.fillAmount = timer / timerDuration;
+            skillCoolText.text = timer.ToString("F1");
 
             if (timer <= 0)
             {
@@ -58,9 +64,11 @@ public class SkillTimerImage : MonoBehaviour
 
     private void ResetCoolDown()
     {
+        useOnEffect.Play();
         isTimerRunning = false;
         filledImage.fillAmount = 0f;
         filledImage.raycastTarget = true;
+        skillCoolText.gameObject.SetActive(false);
     }
 
     public void OnPointerDown(BaseEventData eventData)

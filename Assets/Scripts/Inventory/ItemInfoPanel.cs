@@ -53,8 +53,7 @@ public class ItemInfoPanel : MonoBehaviour
         imageIcon.sprite = _item.ItemIconImage;
         ActiveUI.gameObject.SetActive(true);
 
-        if (consumableItem != null && 
-            consumableItem.ConsumerType == EnumData.E_ConsumerType.Curse)
+        if (curseItemInfo.IsItemOpen(consumableItem.ItemId))
         {
             var (name, explain) = curseItemInfo.GetUseItemMessage(consumableItem);
             itemNameText.text = name;
@@ -80,6 +79,14 @@ public class ItemInfoPanel : MonoBehaviour
         if (consumableItem != null && consumableItem.ConsumerType == EnumData.E_ConsumerType.Curse)
         {
             curseItemInfo.MarkItemAsUsed(consumableItem.ItemId);
+        }
+
+        if (consumableItem != null &&
+            consumableItem.ConsumerType == EnumData.E_ConsumerType.Curse)
+        {
+            var (name, explain) = curseItemInfo.GetUseItemMessage(consumableItem);
+            itemNameText.text = name;
+            itemExplainText.text = explain;
         }
     }
 
