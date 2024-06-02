@@ -59,16 +59,18 @@ public class SkillTimerImage : MonoBehaviour
             isTimerRunning = true;
             timer = timerDuration;
             filledImage.raycastTarget = false;
+            useOnEffect.gameObject.SetActive(false);
         }
     }
 
     private void ResetCoolDown()
     {
-        useOnEffect.Play();
         isTimerRunning = false;
         filledImage.fillAmount = 0f;
         filledImage.raycastTarget = true;
         skillCoolText.gameObject.SetActive(false);
+        useOnEffect.gameObject.SetActive(true);
+        useOnEffect.Play();
     }
 
     public void OnPointerDown(BaseEventData eventData)

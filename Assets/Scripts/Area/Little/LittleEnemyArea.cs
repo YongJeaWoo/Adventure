@@ -10,15 +10,39 @@ public class LittleEnemyArea : EnemyArea
 
     private float originRespawnTime;
 
+    private bool hasDroppedItem = false;
+
     private void Start()
     {
+        itemInfo.ItemId = Random.Range((int)idRange.x, (int)idRange.y);
         originRespawnTime = respawnTimer;
         Spawn();
     }
 
     private void Update()
     {
-        Respawn();
+        //Respawn();
+        AllEnemiesDeadToItemDrop();
+    }
+
+    private void AllEnemiesDeadToItemDrop()
+    {
+        bool allEnemiesDead = true;
+
+        foreach (Transform spawnPos in transforms)
+        {
+            if (spawnPos.childCount > 0)
+            {
+                allEnemiesDead = false;
+                break;
+            }
+        }
+
+        if (allEnemiesDead && !hasDroppedItem)
+        {
+            Open();
+            hasDroppedItem = true;
+        }
     }
 
     protected override void Respawn()
@@ -65,5 +89,10 @@ public class LittleEnemyArea : EnemyArea
                 weightedEnemiesList = new List<GameObject>(enemiesList);
             }
         }
+    }
+
+    public override void Open()
+    {
+        inventorySystem.AddItem(ItemInfo);
     }
 }

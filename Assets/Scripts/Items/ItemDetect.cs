@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ItemDetect : MonoBehaviour
 {
-    private Interactive currentInteractive;
+    private ItemDrop currentInteractive;
     private Image infoImage;
 
     private float detectionRadius = 2f;
@@ -31,7 +31,7 @@ public class ItemDetect : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    if (currentInteractive.TryGetComponent<Interactive>(out var interactive))
+                    if (currentInteractive.TryGetComponent<ItemDrop>(out var interactive))
                     {
                         if (interactive.Interacted) return;
 
@@ -49,7 +49,7 @@ public class ItemDetect : MonoBehaviour
     {
         if (col != null)
         {
-            currentInteractive = col.GetComponent<Interactive>();
+            currentInteractive = col.GetComponent<ItemDrop>();
         }
         else
         {

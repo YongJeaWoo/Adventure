@@ -65,7 +65,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
-  m_ExitTime: 0.88805974
+  m_ExitTime: 1
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -381,7 +381,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: StateTime
-    m_EventTreshold: 0.48
+    m_EventTreshold: 0.5
   - m_ConditionMode: 4
     m_ConditionEvent: StateTime
     m_EventTreshold: 1
@@ -391,9 +391,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.6
+  m_TransitionDuration: 0.5
   m_TransitionOffset: 0
-  m_ExitTime: 0.3
+  m_ExitTime: 0.6
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -443,7 +443,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: StateTime
-    m_EventTreshold: 0.16
+    m_EventTreshold: 0.45
   - m_ConditionMode: 4
     m_ConditionEvent: StateTime
     m_EventTreshold: 1
@@ -453,9 +453,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.63
+  m_TransitionDuration: 0.5
   m_TransitionOffset: 0
-  m_ExitTime: 0.3
+  m_ExitTime: 0.6
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -552,7 +552,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
-  m_ExitTime: 0.84210527
+  m_ExitTime: 1
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -848,7 +848,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
-  m_ExitTime: 0.8125
+  m_ExitTime: 1
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1058,7 +1058,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
-  m_ExitTime: 0.85
+  m_ExitTime: 1
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1077,7 +1077,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: StateTime
-    m_EventTreshold: 0.32
+    m_EventTreshold: 0.45
   - m_ConditionMode: 4
     m_ConditionEvent: StateTime
     m_EventTreshold: 1
@@ -1089,7 +1089,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.6
   m_TransitionOffset: 0
-  m_ExitTime: 0.3
+  m_ExitTime: 0.5
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1359,11 +1359,11 @@ AnimatorStateMachine:
   - {fileID: 6996313228546329787}
   m_EntryTransitions: []
   m_StateMachineTransitions:
+  - first: {fileID: -1634876041024355283}
+    second: []
   - first: {fileID: -262772339049703376}
     second:
     - {fileID: 1144413789939201375}
-  - first: {fileID: -1634876041024355283}
-    second: []
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -210, y: 80, z: 0}
   m_EntryPosition: {x: -210, y: 120, z: 0}

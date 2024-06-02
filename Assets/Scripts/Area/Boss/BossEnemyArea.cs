@@ -1,6 +1,5 @@
 using UnityEngine;
 
-// 플레이어 들어왔을 때의 감지만 확인
 public class BossEnemyArea : EnemyArea
 {
     [Header("적 생성 위치")]
@@ -47,5 +46,10 @@ public class BossEnemyArea : EnemyArea
                 respawnTimer = originRespawnTime;
             }
         }
+    }
+
+    public override void Open()
+    {
+        
     }
 }

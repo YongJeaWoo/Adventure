@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class EnemyArea : MonoBehaviour
+public abstract class EnemyArea : ItemDrop
 {
     [Header("지역별 전투 노래")]
     [SerializeField] private AudioClip battleClip;
