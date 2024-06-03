@@ -21,11 +21,10 @@ public class LittleEnemyArea : EnemyArea
 
     private void Update()
     {
-        //Respawn();
-        AllEnemiesDeadToItemDrop();
+        Respawn();
     }
 
-    private void AllEnemiesDeadToItemDrop()
+    protected override void Respawn()
     {
         bool allEnemiesDead = true;
 
@@ -43,23 +42,8 @@ public class LittleEnemyArea : EnemyArea
             Open();
             hasDroppedItem = true;
         }
-    }
 
-    protected override void Respawn()
-    {
-        bool allEnemiesDead = true;
-
-        foreach (Transform spawnPos in transforms)
-        {
-            if (spawnPos.childCount > 0)
-            {
-                allEnemiesDead = false;
-                break;
-            }
-
-        }
-
-        if (allEnemiesDead)
+        if (hasDroppedItem)
         {
             respawnTimer -= Time.deltaTime;
 
@@ -67,6 +51,7 @@ public class LittleEnemyArea : EnemyArea
             {
                 Spawn();
                 respawnTimer = originRespawnTime;
+                hasDroppedItem = false;
             }
         }
     }
