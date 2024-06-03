@@ -14,7 +14,7 @@ public class LittleEnemyArea : EnemyArea
 
     private void Start()
     {
-        itemInfo.ItemId = Random.Range((int)idRange.x, (int)idRange.y);
+        itemInfo.ItemId = Random.Range((int)idRange.x, (int)idRange.y + 1);
         originRespawnTime = respawnTimer;
         Spawn();
     }

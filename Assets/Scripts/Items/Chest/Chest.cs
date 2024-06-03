@@ -14,8 +14,6 @@ public class Chest : ItemDrop
     private Animator animator;
     private Collider col;
 
-   
-
     [Header("상자 열림 이팩트")]
     [SerializeField] private GameObject openEffectPrefab;
 
