@@ -102,7 +102,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayerEffectSound(AudioClip _clip)
+    public void PlayEffectSound(AudioClip _clip)
     {
         if (_clip == null) return;
         audioSourceEffect.PlayOneShot(_clip);

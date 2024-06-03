@@ -69,12 +69,12 @@ public class CharacterNormalAttack : BaseAttack
 
     public void AnimationEffectSoundEvent()
     {
-        AudioManager.instance.PlayerEffectSound(attackClip);
+        AudioManager.instance.PlayEffectSound(attackClip);
     }
 
     public void GroundEffectSoundEvent()
     {
-        AudioManager.instance.PlayerEffectSound(groundClip);
+        AudioManager.instance.PlayEffectSound(groundClip);
         Instantiate(groundEffectPrefab, attackHitPoint.position, Quaternion.identity);
     }
 

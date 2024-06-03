@@ -80,6 +80,6 @@ public class CharacterSkillAttack : BaseAttack
 
     public void EffectAnimationEvent()
     {
-        AudioManager.instance.PlayerEffectSound(attackClip);
+        AudioManager.instance.PlayEffectSound(attackClip);
     }
 }

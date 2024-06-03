@@ -34,10 +34,10 @@ public class OptionSystem : MouseLock
 
     public void ExitButtonClick()
     {
+        HideMouseCursor();
         isOn = false;
         optionCanvas.SetActive(false);
         PanelManager.instance.SetPanelActive(false);
-        HideMouseCursor();
     }
 
     public void ExitGame()

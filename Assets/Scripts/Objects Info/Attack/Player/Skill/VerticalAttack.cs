@@ -11,6 +11,6 @@ public class VerticalAttack : QSkillComponent
     public void GroundEffectEvent()
     {
         Instantiate(groundEffectPrefab, effectTransform.position, Quaternion.identity);
-        AudioManager.instance.PlayerEffectSound(groundClip);
+        AudioManager.instance.PlayEffectSound(groundClip);
     }
 }

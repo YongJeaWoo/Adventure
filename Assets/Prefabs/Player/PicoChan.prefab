@@ -3644,7 +3644,7 @@ MonoBehaviour:
     type: 3}
   attackRange: 2.5
   damage: 50
-  attackClip: {fileID: 8300000, guid: fd901d9d1098b464ba4e39a2915d38cb, type: 3}
+  attackClip: {fileID: 8300000, guid: 0fa99f43dfb76794085b1091ad63cdeb, type: 3}
   skillName: QSkill
   qSkillSOJ: {fileID: 11400000, guid: b99f0d50a7c7f4246af00b208abd20e7, type: 2}
   groundEffectPrefab: {fileID: 3432958286849152088, guid: 0797dafdf4abd274ab4089de1b3b6c6e,
