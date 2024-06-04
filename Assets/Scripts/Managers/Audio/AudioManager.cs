@@ -118,8 +118,6 @@ public class AudioManager : MonoBehaviour
         
         if (!audioSourceBattle.isPlaying)
         {
-            Debug.Log($"음악 재생");
-            Debug.Log($"오디오 클립 {audioSourceBattle.clip}");
             audioSourceBattle.Play();
         }
     }

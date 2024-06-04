@@ -5,6 +5,12 @@ public class TitleController : MonoBehaviour
     [Header("¿É¼Ç Äµ¹ö½º")]
     [SerializeField] private GameObject optionCanvas;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     public void StartButton()
     {
         LoadingController.LoadScene("Game");
