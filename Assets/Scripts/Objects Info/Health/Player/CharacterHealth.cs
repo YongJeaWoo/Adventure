@@ -12,7 +12,6 @@ public class CharacterHealth : BaseHealth
     [SerializeField] private Slider healthSlider;
     public Slider HealthSlider { get => healthSlider; set => healthSlider = value; }
 
-
     private void Awake()
     {
         animator = GetComponent<Animator>();

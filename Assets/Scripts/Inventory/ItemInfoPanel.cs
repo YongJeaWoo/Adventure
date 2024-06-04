@@ -74,19 +74,27 @@ public class ItemInfoPanel : MonoBehaviour
     public void OnUseItemButtonClick()
     {
         inventoryUI.UseItem(item);
-        PlayerManager.instance.RefreshHpUI(consumableItem);
 
         if (consumableItem != null && consumableItem.ConsumerType == EnumData.E_ConsumerType.Curse)
         {
             curseItemInfo.MarkItemAsUsed(consumableItem.ItemId);
         }
 
-        if (consumableItem != null &&
-            consumableItem.ConsumerType == EnumData.E_ConsumerType.Curse)
+        switch (consumableItem.ConsumerType)
         {
-            var (name, explain) = curseItemInfo.GetUseItemMessage(consumableItem);
-            itemNameText.text = name;
-            itemExplainText.text = explain;
+            case EnumData.E_ConsumerType.HpUp:
+                var health = PlayerManager.instance.GetPlayer().GetComponent<CharacterHealth>();
+                health.HpUp(consumableItem.Value);
+                break;
+            case EnumData.E_ConsumerType.Curse:
+                var (name, explain) = curseItemInfo.GetUseItemMessage(consumableItem);
+                itemNameText.text = name;
+                itemExplainText.text = explain;
+                PlayerManager.instance.CurseEffectToDamage(consumableItem);
+                break;
+            case EnumData.E_ConsumerType.BuffAttack:
+                PlayerManager.instance.IncreaseAttack(consumableItem);
+                break;
         }
     }
 

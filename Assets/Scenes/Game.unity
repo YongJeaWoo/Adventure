@@ -1542,7 +1542,7 @@ MonoBehaviour:
   itemInfo:
     ItemId: 0
     ItemType: 0
-  idRange: {x: 1001, y: 1002}
+  idRange: {x: 1001, y: 1003}
   openEffectPrefab: {fileID: 8771972552311404799, guid: 1202374abba3dcb42b5ebaaf21466c30,
     type: 3}
   destroyPrefab: {fileID: 6403252182692130976, guid: 326a29e1f585fba498fa655230d5513f,
@@ -4024,7 +4024,7 @@ MonoBehaviour:
   itemInfo:
     ItemId: 0
     ItemType: 0
-  idRange: {x: 1001, y: 1002}
+  idRange: {x: 1001, y: 1003}
   battleClip: {fileID: 8300000, guid: e52983d9d83ae3c429116fcc6cceffa0, type: 3}
   respawnTimer: 10
   spawnPos: {fileID: 1840530975}
@@ -6637,7 +6637,7 @@ MonoBehaviour:
   itemInfo:
     ItemId: 0
     ItemType: 0
-  idRange: {x: 1001, y: 1002}
+  idRange: {x: 1001, y: 1003}
   battleClip: {fileID: 0}
   respawnTimer: 10
   enemiesList:
@@ -9813,7 +9813,7 @@ MonoBehaviour:
   itemInfo:
     ItemId: 0
     ItemType: 0
-  idRange: {x: 1001, y: 1002}
+  idRange: {x: 1001, y: 1003}
   battleClip: {fileID: 0}
   respawnTimer: 10
   enemiesList:
@@ -10710,7 +10710,7 @@ MonoBehaviour:
   itemInfo:
     ItemId: 0
     ItemType: 0
-  idRange: {x: 1001, y: 1002}
+  idRange: {x: 1001, y: 1003}
   openEffectPrefab: {fileID: 8771972552311404799, guid: 1202374abba3dcb42b5ebaaf21466c30,
     type: 3}
   destroyPrefab: {fileID: 6403252182692130976, guid: 326a29e1f585fba498fa655230d5513f,
@@ -11216,7 +11216,7 @@ MonoBehaviour:
   itemInfo:
     ItemId: 0
     ItemType: 0
-  idRange: {x: 1001, y: 1002}
+  idRange: {x: 1001, y: 1003}
   openEffectPrefab: {fileID: 8771972552311404799, guid: 1202374abba3dcb42b5ebaaf21466c30,
     type: 3}
   destroyPrefab: {fileID: 6403252182692130976, guid: 326a29e1f585fba498fa655230d5513f,
@@ -12246,7 +12246,7 @@ MonoBehaviour:
   itemInfo:
     ItemId: 0
     ItemType: 0
-  idRange: {x: 1001, y: 1002}
+  idRange: {x: 1001, y: 1003}
   battleClip: {fileID: 0}
   respawnTimer: 10
   enemiesList:
@@ -27187,7 +27187,7 @@ MonoBehaviour:
   itemInfo:
     ItemId: 0
     ItemType: 0
-  idRange: {x: 1001, y: 1002}
+  idRange: {x: 1001, y: 1003}
   openEffectPrefab: {fileID: 8771972552311404799, guid: 1202374abba3dcb42b5ebaaf21466c30,
     type: 3}
   destroyPrefab: {fileID: 6403252182692130976, guid: 326a29e1f585fba498fa655230d5513f,

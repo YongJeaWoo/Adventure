@@ -36,27 +36,24 @@ public class PlayerManager : MonoBehaviour
         player = null;
     }
 
-    public void RefreshHpUI(ConsumableItem _item)
+    public void IncreaseAttack(ConsumableItem _item)
     {
-        var playerHealth = player.GetComponent<CharacterHealth>();
-        var cType = _item.ConsumerType;
+        var playerDamage = player.GetComponent<BaseAttack>();
 
-        switch (cType)
+        if (_item.ConsumerType == EnumData.E_ConsumerType.BuffAttack)
         {
-            case EnumData.E_ConsumerType.HpUp:
-                {
-                    playerHealth.HpUp(_item.Value);
-                }
-                break;
-            case EnumData.E_ConsumerType.Curse:
-                {
-                    StartCoroutine(CurseEffect(playerHealth, _item));
-                }
-                break;
+            playerDamage.Damage += _item.Value;
         }
     }
 
-    private IEnumerator CurseEffect(CharacterHealth _playerHp, ConsumableItem _effectItem)
+    public void CurseEffectToDamage(ConsumableItem _item)
+    {
+        var health = player.GetComponent<BaseHealth>();
+
+        StartCoroutine(CurseEffect(health, _item));
+    }
+
+    private IEnumerator CurseEffect(BaseHealth _playerHp, ConsumableItem _effectItem)
     {
         float duration = 5f;
         float interval = 1f;

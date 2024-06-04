@@ -8,12 +8,14 @@ public class BaseAttack : MonoBehaviour
     [SerializeField] protected GameObject attackHitEffectPrefab;
     [Header ("공격 범위")]
     [SerializeField] protected float attackRange;
-    [Header ("데미지")]
+    [Header("데미지")]
     [SerializeField] protected int damage;
+    public int Damage { get => damage; set => damage = value; }
 
     protected bool takeDamaged;
 
     protected Animator animator;
+
 
     protected virtual void Awake()
     {
@@ -29,7 +31,7 @@ public class BaseAttack : MonoBehaviour
             if (hitObj.TryGetComponent<BaseHealth>(out var enemyHealth))
             {
                 var hitPos = hitObj.ClosestPoint(attackHitPoint.position);
-                enemyHealth.TakeDamage(attackHitEffectPrefab, hitPos, damage, true);
+                enemyHealth.TakeDamage(attackHitEffectPrefab, hitPos, Damage, true);
                 hitObj.GetComponent<IHit>().Hit();
             }
         }
