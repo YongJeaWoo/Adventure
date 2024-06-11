@@ -84,6 +84,11 @@ public class ItemInfoPanel : MonoBehaviour
         {
             case EnumData.E_ConsumerType.HpUp:
                 var health = PlayerManager.instance.GetPlayer().GetComponent<CharacterHealth>();
+                if (health.CurrentHp >= health.Hp)
+                {
+                    health.CurrentHp = health.Hp;
+                    return;
+                }
                 health.HpUp(consumableItem.Value);
                 break;
             case EnumData.E_ConsumerType.Curse:
