@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class BaseHealth : MonoBehaviour
 {
+    [Header("맞는 소리")]
+    [SerializeField] private AudioClip hitClip;
     [Header("체력 표시")]
     [SerializeField] protected GameObject damageTextPrefab;
     [Header("피격 파티클")]
@@ -61,6 +63,7 @@ public class BaseHealth : MonoBehaviour
         var random = hitEffectPrefab.GetComponent<RandomPosition>();
         random.RandomPos();
         ShowDamagedText(damage);
+        AudioManager.instance.PlayEffectSound(hitClip);
     }
 
     private void ShowDamagedText(int _damage)

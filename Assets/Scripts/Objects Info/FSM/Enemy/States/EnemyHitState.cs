@@ -1,4 +1,3 @@
-
 public class EnemyHitState : EnemyAttackAble, IHit
 {
     private bool isHit;
@@ -14,7 +13,7 @@ public class EnemyHitState : EnemyAttackAble, IHit
             return;
         }
 
-        IsHit = true;
+        IsHit = true;       
         animator.SetInteger(AnimationName, (int)state);
     }
     

@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50cf6b0971448c045a110cc67e5b4269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitClip: {fileID: 8300000, guid: 648b42ecd5c922044835900416855f22, type: 3}
   damageTextPrefab: {fileID: 8879156435315789978, guid: 07f3d19c575a8a5439b42beeb32015c5,
     type: 3}
   hitEffectPos: {fileID: 7674972294966679937}
@@ -1042,7 +1043,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 104, y: 14}
+  m_SizeDelta: {x: 80, y: 14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4290875190891465312
 CanvasRenderer:
