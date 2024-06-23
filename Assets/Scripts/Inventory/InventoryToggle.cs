@@ -36,23 +36,6 @@ public class InventoryToggle : MouseLock
         }
     }
 
-    public void ToggleInventory(bool _state)
-    {
-        isOn = _state;
-        inventoryCanvas.gameObject.SetActive(isOn);
-        PanelManager.instance.SetPanelActive(isOn);
-
-        if (isOn)
-        {
-            itemInfoPanel.ActiveUI.gameObject.SetActive(false);
-            ShowMouseCursor();
-        }
-        else
-        {
-            HideMouseCursor();
-        }
-    }
-
     public void ExitButtonClick()
     {
         isOn = false;
